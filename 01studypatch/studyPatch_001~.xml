@@ -1,0 +1,131 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="H:\work\勉強会\00vvvv\studyPatch_001.v4p" systemname="studyPatch_001" filename="H:\work\勉強会\00vvvv\studyPatch_001.v4p" scrollx="105" scrolly="0">
+   <BOUNDS type="Window" left="2850" top="420" width="8730" height="12555">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="255" top="75" width="1380" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="255" top="75" width="8325" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|vvvv study patch vol.1 2016.1.18　                       vvvv off@sapporo|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4470" top="885" width="780" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4470" top="885" width="4095" height="2820">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt;GOAL&gt;&gt;&cr;&lf;get used to making patch on vvvv&cr;&lf;&cr;&lf;&lt;&lt;USE NODE&gt;&gt;&cr;&lf;IOBOX（Value Advanced)&cr;&lf;Transform(Transfrom 2d)&cr;&lf;IOBOX(String)&cr;&lf;IOBOX(Color)&cr;&lf;Text(String)&cr;&lf;Renderer(EX9)&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="840" top="2250" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="840" top="2250" width="1380" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|Hello World！|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="525" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="525" top="4110" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="525" top="4110" width="3300" height="1965">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3150" top="5760" width="6240" height="5055">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="4" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="3" dstpinname="Text">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="690" top="1815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4485" top="3810" width="1020" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4485" top="3810" width="3840" height="7500">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|＜＜目的＞＞&cr;&lf;ｖｖｖｖの基本操作を覚える&cr;&lf;&cr;&lf;&lt;&lt;覚えること＞＞&cr;&lf;・左ダブルクリックでノード検索を表示し目的のノードを検索し追加する。&cr;&lf;・ノードを選択しCTRL+Iでインスペクターを表示する。&cr;&lf;&cr;&lf;・右ダブルクリックでIOBOXの候補を表示し追加&cr;&lf;・スペース＋右クリックでメニューを表示しSaveでパッチを保存。（CTRL+S）でもOK。&cr;&lf;・IOBOX(Color)の使い方&cr;&lf;　Hue（色相）：左右に右ドラッグ（彩度が0の場合は変化しない）&cr;&lf;　Saturation（彩度）：Ctrl+上下に右ドラッグ（明度が0の場合は変化しない）&cr;&lf;　Value（明度）：ノード上で上下に右ドラッグ&cr;&lf;　Alpha(透明度）：Shift+上下に右ドラッグ&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="メイリオ">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="10">
+   <BOUNDS type="Node" left="1350" top="1140" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1350" top="1140" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.31">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="5" dstpinname="ScaleY">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="5" dstpinname="ScaleX">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="1785" top="2760" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1785" top="2760" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.93152,0.24425,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Color Output" dstnodeid="3" dstpinname="Color">
+   </LINK>
+   </PATCH>

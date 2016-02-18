@@ -1,0 +1,91 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="H:\work\勉強会\00vvvv\20160206\01link.v4p" scrollx="405" scrolly="0" systemname="01link" filename="H:\work\勉強会\00vvvv\20160206\01link.v4p">
+   <BOUNDS type="Window" left="3915" top="2565" width="6810" height="4395">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="810" top="195" width="2430" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="810" top="195" width="6105" height="420">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|vvvvoff@sapporo#2 2016/02/06|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="1590" top="900" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1590" top="900" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="2250" top="1650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="1650" y="1380">
+   </LINKPOINT>
+   <LINKPOINT x="2235" y="1380">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="3225" top="2580" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3225" top="2580" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value" linkstyle="VHV">
+   <LINKPOINT x="2600" y="2238">
+   </LINKPOINT>
+   <LINKPOINT x="2920" y="2263">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="3315" top="930" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3315" top="930" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input 2">
+   <LINKPOINT x="3135" y="1530">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="14" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4635" top="990" width="1470" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4635" top="990" width="1710" height="1635">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|・任意の場所で曲げれる&cr;&lf;・Ctrl＋Yで形状を変更|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   </PATCH>

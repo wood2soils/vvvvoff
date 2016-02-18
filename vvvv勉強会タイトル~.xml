@@ -1,0 +1,291 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="H:\work\勉強会\00vvvv\vvvv勉強会タイトル.v4p" scrollx="105" scrolly="15" systemname="vvvv勉強会タイトル" filename="H:\work\勉強会\00vvvv\vvvv勉強会タイトル.v4p">
+   <BOUNDS type="Window" left="2775" top="360" width="10305" height="14805">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="195" top="180" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="195" top="180" width="9915" height="2760">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2310" top="885" width="9810" height="2910">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1065" top="4035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Text" slicecount="1" values="vvvvオフ会@sapporo">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <BOUNDS type="Box" left="1065" top="4035">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1215" top="3450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.22">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1335" top="4845" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Text" slicecount="1" values="|2016/2/6（土） 14:00~17:00 札幌市産業振興センター セミナールーム４|">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <BOUNDS type="Box" left="1335" top="4845">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="1080" top="6285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="11" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="11" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Layer" dstnodeid="0" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="1335" top="4425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.73">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.36">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.05">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.33">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="2730" top="3135" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2730" top="3135" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|0.01789,0.02542,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="7" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="1" dstpinname="Color">
+   </LINK>
+   <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="2685" top="5235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Text" slicecount="1" values="vol.2">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Arial Baltic|">
+   </PIN>
+   <PIN pinname="Brush Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="11" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="14" dstpinname="Color">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="3180" top="5730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.19">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.41">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.76">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.54">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="14" dstpinname="Transform">
+   </LINK>
+   <NODE componentmode="InABox" id="29" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="0" left="5385" top="3090" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="10935" left="5385" top="3090" type="Box" width="4695">
+   </BOUNDS>
+   <BOUNDS height="4860" left="19080" top="555" type="Window" width="6120">
+   </BOUNDS>
+   <PIN pinname="View" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.11417,0.52406,0.74389,0.00334|" visible="1">
+   </PIN>
+   <PIN pinname="Presentation Interval" slicecount="1" values="immediately">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="28" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
+   <BOUNDS height="0" left="6705" top="7545" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="FitHeight">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="29" dstpinname="Aspect Ratio" srcnodeid="28" srcpinname="Transform Out">
+   </LINK>
+   <NODE id="27" componentmode="InABox" nodename="Text (EX9)" systemname="Text (EX9)" filename="%VVVV%\plugins\DrawText.dll">
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Text" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="525" top="7230" width="100">
+   </BOUNDS>
+   <BOUNDS type="Box" height="270" left="525" top="7230" width="2550">
+   </BOUNDS>
+   <BOUNDS type="Window" height="0" left="14955" top="8715" width="0">
+   </BOUNDS>
+   <PIN pinname="Font" slicecount="1" values="Arial">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Normalize" slicecount="1" values="Height">
+   </PIN>
+   <PIN pinname="Size" visible="1" slicecount="1" values="150">
+   </PIN>
+   <PIN pinname="Space">
+   </PIN>
+   <PIN pinname="Italic" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Brush" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Brush Color" slicecount="1" values="|0.18798,0.85142,0.37845,1.00000|" visible="1">
+   </PIN>
+   <PIN pinname="Horizontal Align" slicecount="1" values="Left">
+   </PIN>
+   <PIN pinname="Bold" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Text Rendering Mode" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="29" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Actual Backbuffer Width" dstnodeid="28" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Actual Backbuffer Height" dstnodeid="28" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="27" dstpinname="Color">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="6345" top="9630" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6345" top="9630" width="375" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="630" top="6720" width="1200" height="270">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="-0.43">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="1.95">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.92">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Transform Out" dstnodeid="27" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="34">
+   <BOUNDS type="Node" left="2985" top="6135" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2985" top="6135" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Chooser Style" slicecount="1" values="RGBASlider">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Color Output" dstnodeid="29" dstpinname="Background Color">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Color Output" dstnodeid="27" dstpinname="Brush Color">
+   </LINK>
+   </PATCH>
